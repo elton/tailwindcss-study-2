@@ -1,28 +1,28 @@
 import Head from "next/head";
 import PropertyCard from "../components/PorpertyCard";
 
-function Home({ properties }) {
+const Home = ({ properties }) => {
   return (
-    <div>
+    <div className="antialiased text-gray-900">
       <Head>
-        <title>Create Next App</title>
+        <title>Wonderful Properties</title>
       </Head>
 
       <PropertyCard properties={properties} />
     </div>
   );
-}
+};
 
 export async function getStaticProps() {
   const properties = {
     property: [
       {
         imageUrl:
-          "https://pixabay.com/get/54e1dd444b55ac14f6d1867dda293f7e1137d8e55a4c704c7c277fd59748c459_1920.jpg",
+          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
         imageAlt: "Rear view of modern home with pool",
         beds: 3,
         baths: 2,
-        title: "Modern home in city center",
+        title: "Modern executive home in the heart of historic Los Angeles",
         priceInCents: 190000,
         formattedPrice: "$1,900.00",
         reviewCount: 34,
